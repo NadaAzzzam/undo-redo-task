@@ -11,6 +11,7 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
 import { UndoRedoFormService } from './services/und-redo-form.store.service';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { MatToolbarModule } from '@angular/material/toolbar'; // Import MatToolbarModule
 
 @Component({
   selector: 'app-root',
@@ -26,6 +27,7 @@ import { CommonModule } from '@angular/common';
     MatSnackBarModule,
     HighlightDirective,
     CommonModule,
+    MatToolbarModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
