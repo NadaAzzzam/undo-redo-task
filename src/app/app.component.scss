@@ -1,0 +1,20 @@
+mat-card {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.highlighted {
+  animation: highlightAnimation 0.5s ease-in-out;
+}
+
+@keyframes highlightAnimation {
+  0% { background-color: #ffeb3b; }
+  100% { background-color: transparent; }
+}
