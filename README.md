@@ -3,8 +3,7 @@
 A modern Angular application showcasing form management with undo/redo capabilities using NgRx store, featuring visual feedback and Material Design components.
 
 ## 🚀 UI
-[Uploading screen-capture (9).webm…]()
-
+[screen-capture (9).webm](https://github.com/user-attachments/assets/cb3370f0-ede1-4f10-b580-29180e7565b3)
 
 ## 🚀 Features
 
