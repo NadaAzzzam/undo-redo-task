@@ -1,27 +1,105 @@
-# UndoRedoTask
+# Angular Form with Undo/Redo Functionality
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+A modern Angular application showcasing form management with undo/redo capabilities using NgRx store, featuring visual feedback and Material Design components.
 
-## Development server
+## 🚀 Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Form state management with NgRx
+- Undo/Redo functionality
+- Visual feedback with highlight animations
+- Material Design components
+- Form validation
+- Responsive design
+- Redux DevTools integration
 
-## Code scaffolding
+## 🛠️ Technologies Used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular 17+
+- NgRx Store
+- Angular Material
+- RxJS
+- TypeScript
 
-## Build
+## 📋 Prerequisites
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Node.js (version 18.x or higher)
+- npm (version 9.x or higher)
+- Angular CLI (version 17.x)
 
-## Running unit tests
+## 🔧 Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository:
+```bash
+git clone [repository-url]
+```
 
-## Running end-to-end tests
+2. Install dependencies:
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Run the development server:
+```bash
+ng serve
+```
 
-## Further help
+4. Open your browser and navigate to `http://localhost:4200`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 🏗️ Project Structure
+
+```
+src/
+├── app/
+│   ├── components/
+│   ├── directives/
+│   │   └── highlight/
+│   ├── services/
+│   └── store/
+│       ├── actions/
+│       ├── reducers/
+│       ├── selectors/
+│       └── utils/
+├── styles/
+└── environments/
+```
+
+## 💡 Usage
+
+The form includes fields for:
+- Name (required)
+- Email (required, with validation)
+- Notifications toggle
+- Role selection (required)
+
+### Undo/Redo Features:
+- Click the Undo button to revert to the previous state
+- Click the Redo button to restore a previously undone state
+- Visual highlight feedback when changes occur
+
+### Store Implementation
+```
+🏗️ feat: Add NgRx store implementation
+
+- Configure store with undo/redo functionality
+- Set up actions, reducers, and selectors
+- Implement form state management
+```
+
+### Highlight Feature
+```
+✨ feat: Add highlight animation directive
+
+- Create highlight directive
+- Implement animation styles
+- Add trigger mechanism for undo/redo actions
+```
+
+### DevTools Integration
+```
+🔧 feat: Configure Redux DevTools
+
+- Add DevTools configuration
+- Set up store debugging capabilities
+- Implement runtime checks
+```
+
