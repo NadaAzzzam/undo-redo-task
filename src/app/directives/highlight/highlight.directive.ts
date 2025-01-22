@@ -1,5 +1,4 @@
-// directives/highlight/highlight.directive.ts
-import { Directive, ElementRef, Renderer2, HostBinding, HostListener, Input } from '@angular/core';
+import { Directive, HostBinding, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appHighlight]',
