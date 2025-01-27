@@ -2,7 +2,7 @@ import { Action, ActionReducer, createReducer, on } from '@ngrx/store';
 import { UndoRedoState } from '../utils/models/form.interface';
 import { redo, undo, updateForm } from '../actions/form.actions';
 
-export const initialState: UndoRedoState = {
+export const undoRedoInitialState: UndoRedoState = {
   formData: {
     email: '',
     name: '',
@@ -15,7 +15,7 @@ export const initialState: UndoRedoState = {
 
 export const undoRedoFormStateReducer: ActionReducer<UndoRedoState, Action> =
   createReducer(
-    initialState,
+    undoRedoInitialState,
 
     on(updateForm, (state, { formData }) => ({
       ...state,

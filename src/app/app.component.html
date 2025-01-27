@@ -1,35 +1,19 @@
-<mat-card>
-  <mat-toolbar class="toolbar ">
-    <h1 >Undo/Redo Form</h1>
-  </mat-toolbar>
+<mat-toolbar color="primary">
+  <span>My App</span>
+  <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+    <a
+      mat-tab-link
+      *ngFor="let link of navLinks"
+      [routerLink]="link.path"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      {{ link.label }}
+    </a>
+  </nav>
+</mat-toolbar>
 
-  <form [formGroup]="form">
-    <mat-form-field >
-      <mat-label>Name</mat-label>
-      <input matInput appHighlight  [trigger]="highlightTrigger" formControlName="name">
-    </mat-form-field>
-
-    <mat-form-field >
-      <mat-label>Email</mat-label>
-      <input matInput appHighlight  [trigger]="highlightTrigger" formControlName="email">
-    </mat-form-field>
-
-    <mat-checkbox formControlName="notifications" appHighlight  [trigger]="highlightTrigger">Notifications</mat-checkbox>
-
-    <mat-form-field>
-      <mat-label>Role</mat-label>
-      <mat-select  appHighlight  [trigger]="highlightTrigger" formControlName="role">
-        <mat-option value="admin">Admin</mat-option>
-        <mat-option value="user">User</mat-option>
-        <mat-option value="guest">Guest</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </form>
-
-
-  <div class="action-buttons">
-    <button mat-raised-button  color="primary"  (click)="undo()" [disabled]="!(canUndo$ | async)">Undo</button>
-    <button  mat-raised-button color="warn" (click)="redo()" [disabled]="!(canRedo$ | async)">Redo</button>
-
-  </div>
-</mat-card>
+<!-- Add the mat-tab-nav-panel -->
+<mat-tab-nav-panel #tabPanel>
+  <router-outlet></router-outlet>
+</mat-tab-nav-panel>

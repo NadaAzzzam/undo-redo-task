@@ -5,12 +5,16 @@ import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
-import { reducers , metaReducers } from './store/app.reducer';
+import { reducers , metaReducers } from './shared/store/app.reducer';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { authInterceptor } from './core/interceptors/auth.interceptor';
+import { spinnerInterceptor } from './core/interceptors/spinner.interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
+    provideHttpClient(withInterceptors([authInterceptor,spinnerInterceptor])),
     provideAnimationsAsync(),
     provideStore(reducers, {
       metaReducers,
